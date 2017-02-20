@@ -1,2 +1,2 @@
 # EuskalSchema
-Versión reducida de Schema, para usar en euskadi.eus
+Versión reducida de Schema, para usar en euskadi.eus 
