@@ -6,9 +6,3 @@ jdk: oraclejdk8
 
 script: 
 - mvn test
-
-branches:
-  only:
-  - master
-  - development
-
