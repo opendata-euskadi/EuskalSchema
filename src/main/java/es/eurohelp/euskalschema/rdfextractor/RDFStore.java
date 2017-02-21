@@ -43,6 +43,13 @@ public class RDFStore {
 		repo.shutDown();
 	}
 
+	/**
+	 * 
+	 * @param String the URL of the RDF document to load, e.g. http://schemaorgae.appspot.com/version/latest/schema.ttl
+	 * @param RDFFormat the RDF format of the document, e.g. RDFFormat.TURTLE
+	 * 
+	 */
+	
 	public void loadRDFFromURL(String rdfurl, RDFFormat format) {
 		try {
 			URL url = new URL(rdfurl);
@@ -50,7 +57,6 @@ public class RDFStore {
 			logger.info("Loaded RDF from " + rdfurl + " in format " + format);
 		} catch (MalformedURLException e) {
 			logger.error("Malformed URL", e);
-			e.printStackTrace();
 		} catch (RDFParseException e) {
 			logger.error("Malformed RDF", e);
 		} catch (RepositoryException e) {
