@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.query.GraphQueryResult;
+import org.eclipse.rdf4j.query.QueryResults;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
@@ -64,5 +67,13 @@ public class RDFStore {
 		} catch (IOException e) {
 			logger.error("IO exception", e);
 		}
+	}
+	
+	public Model execGraphQuery (String query){
+		GraphQueryResult graphResult = con.prepareGraphQuery(query).evaluate();
+		Model resultModel = QueryResults.asModel(graphResult);
+		logger.info("Executed query: " + query);
+		logger.info("Model size: " + resultModel.size());
+		return resultModel;
 	}
 }
