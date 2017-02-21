@@ -69,6 +69,12 @@ public class RDFStore {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param String the SPARQL query
+	 * 
+	 */
+	
 	public Model execGraphQuery (String query){
 		GraphQueryResult graphResult = con.prepareGraphQuery(query).evaluate();
 		Model resultModel = QueryResults.asModel(graphResult);
