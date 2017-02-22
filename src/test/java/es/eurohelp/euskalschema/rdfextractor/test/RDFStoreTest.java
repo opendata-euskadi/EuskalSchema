@@ -24,6 +24,7 @@ public class RDFStoreTest {
 		RDFStore store = new RDFStore();
 		store.startRDFStore();
 		store.loadRDFFromURL("http://schemaorgae.appspot.com/version/latest/schema.ttl",RDFFormat.TURTLE);
+		store.stopRDFStore();
 	}
 
 	/**
@@ -35,5 +36,6 @@ public class RDFStoreTest {
 		store.startRDFStore();
 		store.loadRDFFromURL("http://schemaorgae.appspot.com/version/latest/schema.ttl",RDFFormat.TURTLE);
 		store.execGraphQuery("CONSTRUCT { ?s ?p ?o } WHERE {?s ?p ?o }");
+		store.stopRDFStore();
 	}
 }
