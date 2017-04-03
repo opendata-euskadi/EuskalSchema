@@ -3,6 +3,7 @@
  */
 package es.eurohelp.euskalschema.rdfextractor;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -58,6 +59,22 @@ public class RDFStore {
 			URL url = new URL(rdfurl);
 			con.add(url, url.toString(), format);
 			logger.info("Loaded RDF from " + rdfurl + " in format " + format);
+		} catch (MalformedURLException e) {
+			logger.error("Malformed URL", e);
+		} catch (RDFParseException e) {
+			logger.error("Malformed RDF", e);
+		} catch (RepositoryException e) {
+			logger.error("Repository error", e);
+		} catch (IOException e) {
+			logger.error("IO exception", e);
+		}
+	}
+	
+	public void loadRDFFromFile(File rdfFile, RDFFormat format) {
+		try {
+			//URL url = new URL(rdfurl);
+			con.add(rdfFile, rdfFile.getName(), format);
+			logger.info("Loaded RDF from " + rdfFile.getName() + " in format " + format);
 		} catch (MalformedURLException e) {
 			logger.error("Malformed URL", e);
 		} catch (RDFParseException e) {
