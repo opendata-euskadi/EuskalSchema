@@ -172,6 +172,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Dun &amp;amp; Bradstreet DUNS number for identifying an organization or business person.</comment>
 	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duns</label>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://schema.org/identifier"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://schema.org/email">
@@ -250,6 +251,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The &lt;a href="http://www.gs1.org/gln"&gt;Global Location Number&lt;/a&gt; (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.</comment>
 	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">globalLocationNumber</label>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://schema.org/identifier"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://schema.org/hasOfferCatalog">
@@ -485,6 +487,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.</comment>
 	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taxID</label>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://schema.org/identifier"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://schema.org/telephone">
@@ -679,6 +682,7 @@
 	<domainIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Invoice"/>
 	<domainIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Order"/>
 	<domainIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Reservation"/>
+	<domainIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Service"/>
 	<rangeIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Organization"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.</comment>
@@ -914,6 +918,14 @@
 	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">illustrator</label>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://schema.org/instructor">
+	<rangeIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Person"/>
+	<domainIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/CourseInstance"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A person assigned to instruct or provide instructional assistance for the &lt;a class="localLink" href="http://schema.org/CourseInstance"&gt;CourseInstance&lt;/a&gt;.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">instructor</label>
+</rdf:Description>
+
 <rdf:Description rdf:about="http://schema.org/landlord">
 	<rangeIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Person"/>
 	<domainIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/RentAction"/>
@@ -927,6 +939,7 @@
 <rdf:Description rdf:about="http://schema.org/lender">
 	<rangeIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Person"/>
 	<domainIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/BorrowAction"/>
+	<rangeIncludes xmlns="http://schema.org/" rdf:resource="http://schema.org/Organization"/>
 	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sub property of participant. The person that lends the object being borrowed.</comment>
 	<label xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lender</label>

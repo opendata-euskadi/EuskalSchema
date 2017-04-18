@@ -49,5 +49,20 @@ public class FileUtils {
 		return FileUtils.class.getClassLoader().getResourceAsStream(name);
 	}
 	
+	/**
+	 * Returns the last segment of an URI, URL or Path.
+	 * 
+	 * @param url
+	 *            the url, path or uri, e.g. http://schema.org/Thing
+	 *            
+	 * @return a String containing last segment of an URI, URL or Path.
+	 *
+	 * @author grozadilla 
+	 */
+	public String getUrlLastSegment(String url){
+		String[] segments = url.split("/");
+		return segments[segments.length-1];
+	}
+	
 	
 }

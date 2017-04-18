@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Schema.org master file: RDFS in RDFa</title>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      span.h {
+        padding-left: 0px;
+        font-weight: bold;
+      }
+      span {
+        display: block;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>EuskalSchema</h1>
+
+    <p>This is an RDFa-based representation of the schema.org schema, the underlying representation of the schema.org vocabulary.</p>
+
+    <p>It is represented in a form based on W3C RDF/RDFS. We encourage proposals for schema.org improvements to be expressed
+      in this same style. See the <a href="http://schema.org/docs/howwework.html">how we work</a> document for information on collaboration.</p>
+    <p>
+    See <a href="http://schema.org/docs/datamodel.html">datamodel</a> for more details,
+    the <a href="http://schema.org/docs/developers.html">developers</a> page for alternate formats.
+    </p>
+    <p>
+      Note: the style of RDFa used here may change in the future. To see the substantive content of the schema, view the
+      HTML source markup. We use a simple subset of RDFa for syntax, including prefixes that are declared in the
+      <a href="http://www.w3.org/2011/rdfa-context/rdfa-1.1">RDFa initial context</a>. We also use Markdown syntax within comments to
+      make hypertext documentation easier to edit. Other <a href="http://schema.org/docs/developers.html#formats">formats</a> are available.
+    </p>
+
+    <hr />
+
+      <div typeof="http://www.w3.org/2000/01/rdf-schema#Class" resource="http://schema.org/Person">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">Person</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person (alive, dead, undead, or fictional).</span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews">source_rNews</a></span>
+      			<span>Subclass of:  <a property="http://www.w3.org/2000/01/rdf-schema#subClassOf" href="http://schema.org/Thing">Thing</a></span>
+      			<link property="http://www.w3.org/2002/07/owl#equivalentClass" href="http://xmlns.com/foaf/0.1/Person" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/additionalName">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">additionalName</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An additional name for a Person, can be used for a middle name.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/address">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">address</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Physical address of the item.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoCoordinates">GeoCoordinates</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/GeoShape">GeoShape</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/PostalAddress">PostalAddress</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/affiliation">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">affiliation</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An organization that this person is affiliated with. For example, a school/university, a club, or a team.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/memberOf" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/alumniOf">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">alumniOf</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An organization that the person is an alumni of.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<link property="http://schema.org/inverseOf" href="http://schema.org/alumni" />
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/EducationalOrganization">EducationalOrganization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/award">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">award</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An award won by or for this item.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Product">Product</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/awards">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">awards</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Awards won by or for this item.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Product">Product</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/award" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/birthDate">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">birthDate</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Date of birth.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Date">Date</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/birthPlace">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">birthPlace</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The place where the person was born.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Place">Place</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/brand">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">brand</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Product">Product</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Brand">Brand</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/children">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">children</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A child of the person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/colleague">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">colleague</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A colleague of the person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/colleagues">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">colleagues</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A colleague of the person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/colleague" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/contactPoint">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">contactPoint</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A contact point for a person or organization.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/contactPoints">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">contactPoints</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A contact point for a person or organization.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/contactPoint" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/deathDate">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">deathDate</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Date of death.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Date">Date</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/deathPlace">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">deathPlace</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The place where the person died.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Place">Place</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/duns">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">duns</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The Dun &amp; Bradstreet DUNS number for identifying an organization or business person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/identifier" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/email">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">email</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Email address.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/familyName">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">familyName</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/faxNumber">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">faxNumber</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The fax number.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/follows">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">follows</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The most generic uni-directional social relation.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/funder">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">funder</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person or organization that supports (sponsors) something through some kind of financial contribution.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/sponsor" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/gender">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">gender</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/GenderType">GenderType</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/givenName">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">givenName</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/globalLocationNumber">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">globalLocationNumber</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The <a href="http://www.gs1.org/gln">Global Location Number</a> (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/identifier" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/hasOfferCatalog">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">hasOfferCatalog</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Indicates an OfferCatalog listing for this Organization, Person, or Service.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/OfferCatalog">OfferCatalog</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/hasPOS">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">hasPOS</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Points-of-Sales operated by the organization or person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Place">Place</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/height">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">height</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The height of the item.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MediaObject">MediaObject</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Product">Product</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VisualArtwork">VisualArtwork</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Distance">Distance</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/homeLocation">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">homeLocation</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A contact location for a person's residence.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Place">Place</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/location" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/honorificPrefix">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">honorificPrefix</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/honorificSuffix">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">honorificSuffix</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/isicV4">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">isicV4</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/jobTitle">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">jobTitle</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The job title of the person (for example, Financial Manager).</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/knows">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">knows</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The most generic bi-directional social/work relation.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/makesOffer">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">makesOffer</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A pointer to products or services offered by the organization or person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/inverseOf" href="http://schema.org/offeredBy" />
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Offer">Offer</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/memberOf">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">memberOf</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An Organization (or ProgramMembership) to which this Person or Organization belongs.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/inverseOf" href="http://schema.org/member" />
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/ProgramMembership">ProgramMembership</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/naics">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">naics</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The North American Industry Classification System (NAICS) code for a particular organization or business person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/nationality">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">nationality</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Nationality of the person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Country">Country</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/netWorth">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">netWorth</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The total financial value of the person as calculated by subtracting assets from liabilities.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/MonetaryAmount">MonetaryAmount</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/PriceSpecification">PriceSpecification</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/owns">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">owns</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Products owned by the organization or person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/OwnershipInfo">OwnershipInfo</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Product">Product</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/parent">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">parent</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A parent of this person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/parents">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">parents</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A parents of the person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/parent" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/performerIn">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">performerIn</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Event that this person is a performer or participant in.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Event">Event</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/relatedTo">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">relatedTo</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The most generic familial relation.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/seeks">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">seeks</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A pointer to products or services sought by the organization or person (demand).</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Demand">Demand</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/sibling">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">sibling</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sibling of the person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/siblings">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">siblings</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sibling of the person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/sibling" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/sponsor">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">sponsor</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/spouse">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">spouse</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The person's spouse.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/taxID">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">taxID</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/identifier" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/telephone">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">telephone</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The telephone number.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Place">Place</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/vatID">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">vatID</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The Value-added Tax ID of the organization or person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/weight">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">weight</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The weight of the product or person.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Product">Product</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/workLocation">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">workLocation</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A contact location for a person's place of work.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Place">Place</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/location" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/worksFor">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">worksFor</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Organizations that the person works for.</span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/accountablePerson">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">accountablePerson</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Specifies the Person that is legally accountable for the CreativeWork.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/acquiredFrom">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">acquiredFrom</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The organization or person from which the product was acquired.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms">source_GoodRelationsTerms</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/OwnershipInfo">OwnershipInfo</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/actor">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">actor</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Clip">Clip</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWorkSeason">CreativeWorkSeason</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Episode">Episode</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Movie">Movie</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MovieSeries">MovieSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/RadioSeries">RadioSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/TVSeries">TVSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGame">VideoGame</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoObject">VideoObject</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/actors">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">actors</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Clip">Clip</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Episode">Episode</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Movie">Movie</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MovieSeries">MovieSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/RadioSeries">RadioSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/TVSeries">TVSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGame">VideoGame</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoObject">VideoObject</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/actor" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/agent">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">agent</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The direct performer or driver of the action (animate or inanimate). e.g. <em>John</em> wrote a book.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/alumni">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">alumni</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Alumni of an organization.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/EducationalOrganization">EducationalOrganization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/inverseOf" href="http://schema.org/alumniOf" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/athlete">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">athlete</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person that acts as performing member of a sports team; a player as opposed to a coach.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsTeam">SportsTeam</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/attendee">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">attendee</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person or organization attending the event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/attendees">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">attendees</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person attending the event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/attendee" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/author">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">author</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Rating">Rating</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/awayTeam">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">awayTeam</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The away team in a sports event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsEvent">SportsEvent</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/SportsTeam">SportsTeam</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/competitor" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/bookingAgent">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">bookingAgent</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">'bookingAgent' is an out-dated term indicating a 'broker' that serves as a booking agent.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Reservation">Reservation</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/broker" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/borrower">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">borrower</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The person that borrows the object being lent.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/LendAction">LendAction</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/broker">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">broker</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Invoice">Invoice</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Order">Order</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Reservation">Reservation</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/buyer">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">buyer</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The participant/person/organization that bought the object.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/SellAction">SellAction</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/candidate">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">candidate</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of object. The candidate subject of this action.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VoteAction">VoteAction</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/object" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/character">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">character</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Fictional person connected with a creative work.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/coach">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">coach</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person that acts in a coaching role for a sports team.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsTeam">SportsTeam</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/competitor">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">competitor</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A competitor in a sports event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsEvent">SportsEvent</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/SportsTeam">SportsTeam</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/composer">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">composer</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The person or organization who wrote a composition, or who is the composer of a work performed at some event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ">MBZ</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MusicComposition">MusicComposition</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/contributor">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">contributor</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A secondary contributor to the CreativeWork or Event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/copyrightHolder">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">copyrightHolder</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The party holding the legal copyright to the CreativeWork.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/creator">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">creator</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/UserComments">UserComments</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/creditedTo">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">creditedTo</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ">MBZ</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MusicRelease">MusicRelease</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/customer">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">customer</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Party placing the order or paying the invoice.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Invoice">Invoice</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Order">Order</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/director">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">director</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Clip">Clip</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWorkSeason">CreativeWorkSeason</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Episode">Episode</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Movie">Movie</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MovieSeries">MovieSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/RadioSeries">RadioSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/TVSeries">TVSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGame">VideoGame</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoObject">VideoObject</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/directors">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">directors</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Clip">Clip</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Episode">Episode</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Movie">Movie</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MovieSeries">MovieSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/RadioSeries">RadioSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/TVSeries">TVSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGame">VideoGame</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoObject">VideoObject</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/director" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/editor">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">editor</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Specifies the Person who edited the CreativeWork.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/employee">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">employee</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Someone working for this organization.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/employees">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">employees</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">People working for this organization.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/employee" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/endorsee">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">endorsee</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The person/organization being supported.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/EndorseAction">EndorseAction</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/followee">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">followee</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of object. The person or organization being followed.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/FollowAction">FollowAction</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/object" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/founder">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">founder</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person who founded this organization.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/founders">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">founders</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person who founded this organization.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/founder" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/grantee">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">grantee</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The person, organization, contact point, or audience that has been granted this permission.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/DigitalDocumentPermission">DigitalDocumentPermission</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Audience">Audience</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/ContactPoint">ContactPoint</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/homeTeam">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">homeTeam</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The home team in a sports event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsEvent">SportsEvent</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/SportsTeam">SportsTeam</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/competitor" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/illustrator">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">illustrator</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The illustrator of the book.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Book">Book</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/instructor">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">instructor</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A person assigned to instruct or provide instructional assistance for the <a class="localLink" href="http://schema.org/CourseInstance">CourseInstance</a>.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CourseInstance">CourseInstance</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/landlord">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">landlord</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The owner of the real estate property.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/RentAction">RentAction</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/lender">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">lender</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The person that lends the object being borrowed.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/BorrowAction">BorrowAction</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/loser">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">loser</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The loser of the action.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/WinAction">WinAction</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/lyricist">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">lyricist</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The person who wrote the words.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Source:  <a property="http://purl.org/dc/terms/source" href="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ">MBZ</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MusicComposition">MusicComposition</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/member">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">member</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ProgramMembership">ProgramMembership</a></span>
+      			<link property="http://schema.org/inverseOf" href="http://schema.org/memberOf" />
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/members">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">members</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A member of this organization.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ProgramMembership">ProgramMembership</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/member" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/merchant">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">merchant</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">'merchant' is an out-dated term for 'seller'.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Order">Order</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/seller" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/musicBy">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">musicBy</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The composer of the soundtrack.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Clip">Clip</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Episode">Episode</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Movie">Movie</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MovieSeries">MovieSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/RadioSeries">RadioSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/TVSeries">TVSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGame">VideoGame</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoGameSeries">VideoGameSeries</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/VideoObject">VideoObject</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/MusicGroup">MusicGroup</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/musicGroupMember">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">musicGroupMember</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A member of a music group&#x2014;for example, John, Paul, George, or Ringo.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/MusicGroup">MusicGroup</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/member" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/offeredBy">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">offeredBy</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A pointer to the organization or person making the offer.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Offer">Offer</a></span>
+      			<link property="http://schema.org/inverseOf" href="http://schema.org/makesOffer" />
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/opponent">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">opponent</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The opponent on this action.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ExerciseAction">ExerciseAction</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/organizer">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">organizer</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An organizer of an Event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/participant">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">participant</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Other co-agents that participated in the action indirectly. e.g. John wrote a book with <em>Steve</em>.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Action">Action</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/performer">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">performer</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A performer at the event&#x2014;for example, a presenter, musician, musical group or actor.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/performers">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">performers</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The main performer or performers of the event&#x2014;for example, a presenter, musician, or actor.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/performer" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/producer">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">producer</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/provider">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">provider</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/BusTrip">BusTrip</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Flight">Flight</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Invoice">Invoice</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ParcelDelivery">ParcelDelivery</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Reservation">Reservation</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Service">Service</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/TrainTrip">TrainTrip</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/publisher">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">publisher</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The publisher of the creative work.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/recipient">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">recipient</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The participant who is at the receiving end of the action.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/AuthorizeAction">AuthorizeAction</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CommunicateAction">CommunicateAction</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/DonateAction">DonateAction</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/GiveAction">GiveAction</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Message">Message</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/PayAction">PayAction</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ReturnAction">ReturnAction</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/SendAction">SendAction</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/TipAction">TipAction</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Audience">Audience</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/reviewedBy">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">reviewedBy</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">People or organizations that have reviewed the content on this web page for accuracy and/or completeness.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/WebPage">WebPage</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/seller">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">seller</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/BuyAction">BuyAction</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Demand">Demand</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Flight">Flight</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Offer">Offer</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Order">Order</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/sender">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">sender</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The participant who is at the sending end of the action.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Message">Message</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/ReceiveAction">ReceiveAction</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Audience">Audience</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/translator">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">translator</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/CreativeWork">CreativeWork</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Event">Event</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/underName">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">underName</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">The person or organization the reservation or ticket is for.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Reservation">Reservation</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/Ticket">Ticket</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/vendor">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">vendor</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">'vendor' is an earlier term for 'seller'.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/BuyAction">BuyAction</a></span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Organization">Organization</a></span>
+      			<link property="http://schema.org/supersededBy" href="http://schema.org/seller" />
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+      <div typeof="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" resource="http://schema.org/winner">
+      			<span class="h" property="http://www.w3.org/2000/01/rdf-schema#label">winner</span>
+      			<span  property="http://www.w3.org/2000/01/rdf-schema#comment">A sub property of participant. The winner of the action.</span>
+      			<span>Range:  <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>
+      			<span>Domain:  <a property="http://schema.org/domainIncludes" href="http://schema.org/LoseAction">LoseAction</a></span>
+      			<link property="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" href="http://schema.org/participant" />
+      </div>
+   
+
+</body>
+</html>
