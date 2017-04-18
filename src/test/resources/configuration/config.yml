@@ -1,4 +1,4 @@
-url: http://schemaorgae.appspot.com/version/latest/schema.ttl
 sparql: person.sparql
-result-file: C:\Users\megana\git\EuskalSchema\src\test\resources\result\person.ttl
+schema-file: C:\Users\megana\git\EuskalSchema\src\test\resources\result\schema.ttl
 html-result-file: C:\Users\megana\git\EuskalSchema\src\test\resources\result\euskal-schema.html
+html-template: /src/main/resources/schema_template.ftl

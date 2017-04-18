@@ -24,48 +24,43 @@ import es.eurohelp.euskalschema.rdfextractor.RdfaManager;
 public class RdfaManagerTest {
 
 	/**
-	 * Test method for {@link es.eurohelp.euskalschema.rdfextractor.ExtractorManager#getInstance()}.
+	 * Test method for
+	 * {@link es.eurohelp.euskalschema.rdfextractor.ExtractorManager#getInstance()}
+	 * .
 	 */
 	@Test
 	public final void testGetInstance() {
-//		fail("Not yet implemented"); // TODO
+		// fail("Not yet implemented"); // TODO
 	}
 
 	/**
-	 * Test method for {@link es.eurohelp.euskalschema.rdfextractor.ExtractorManager#executeExtraction(java.lang.String, org.eclipse.rdf4j.rio.RDFFormat)}.
+	 * Test method for
+	 * {@link es.eurohelp.euskalschema.rdfextractor.ExtractorManager#executeExtraction(java.lang.String, org.eclipse.rdf4j.rio.RDFFormat)}
+	 * .
+	 * @throws Exception 
 	 */
 	@Test
-	public final void testExecuteExtraction() {
-//		fail("Not yet implemented"); // TODO
-		
-		
+	public final void testExecuteExtraction() throws Exception {
+
+		// Configurar 
 		ConfigManager config = ConfigManager.getInstance();
 		config.loadConfigurationFromYAMLFile();
-		
-		config.getConfigValue("");
-		
+
+		// Cargar Schema
 		RDFStore store = new RDFStore();
 		store.startRDFStore();
-		File resultfile = new File(config.getConfigValue("result-file"));
-		store.loadRDFFromFile(resultfile,RDFFormat.RDFXML);
-		
+		File schemafile = new File(config.getConfigValue("schema-file"));
+		store.loadRDFFromFile(schemafile, RDFFormat.TURTLE);
+
+		// Ejecutar SPARQL
 		InputStream sparqlio = FileUtils.getInstance().getInputStream("configuration/" + config.getConfigValue("sparql"));
 		String sparql = null;
-		try {
-			sparql = IOUtils.toString(sparqlio, "UTF-8");
-//			logger.info("Loaded SPARQL: " + sparql);
-		} catch (IOException e) {
-			
-		}
-		
-		
+		sparql = IOUtils.toString(sparqlio, "UTF-8");
 		Model model = store.execGraphQuery(sparql);
+		
+		
+		// Convertir resultado de SPARQL a RDFa
 		RdfaManager manager = RdfaManager.getInstance();
-		try {
-			manager.createRdfaFromModel(model);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		manager.createRdfaFromModel(model);
 	}
-
 }

@@ -136,7 +136,10 @@ public class RdfaManager {
 
         // 2.2. Get the template
 
-        Template template = cfg.getTemplate("/src/main/resources/schema_template.ftl");
+//        Template template = cfg.getTemplate("/src/main/resources/schema_template.ftl");
+        
+        ConfigManager config = ConfigManager.getInstance();
+        Template template = cfg.getTemplate(config.getConfigValue("html-template"));
 
         // 2.3. Generate the output
 
@@ -144,7 +147,10 @@ public class RdfaManager {
         Writer consoleWriter = new OutputStreamWriter(System.out);
         template.process(input, consoleWriter);
 
-        ConfigManager config = ConfigManager.getInstance();
+        
+        
+        
+        
         String htmlFileName = config.getConfigValue("html-result-file");
         
         // For the sake of example, also write output into a file:
