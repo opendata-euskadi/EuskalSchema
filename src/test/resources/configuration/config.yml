@@ -1,0 +1,4 @@
+sparql: person.sparql
+schema-file: C:\Users\megana\git\EuskalSchema\src\test\resources\result\schema.ttl
+html-result-file: C:\Users\megana\git\EuskalSchema\src\test\resources\result\euskal-schema.html
+html-template: /src/main/resources/schema_template.ftl

@@ -1,0 +1,19 @@
+PREFIX schema: <http://schema.org/>
+
+CONSTRUCT{ 
+    schema:Person ?prop ?obj .
+    ?propDomainIncludes schema:domainIncludes schema:Person .
+	?propDomainIncludes ?p ?propDomainIncludesAttributes .
+    ?propRangeIncludes schema:rangeIncludes schema:Person .
+	?propRangeIncludes ?q ?propRangeIncludesAttributes
+}
+WHERE{
+    {schema:Person ?prop ?obj}
+    UNION
+    {?propDomainIncludes schema:domainIncludes schema:Person .
+    ?propDomainIncludes ?p ?propDomainIncludesAttributes}
+    UNION
+    {?propRangeIncludes schema:rangeIncludes schema:Person .
+    ?propRangeIncludes ?q ?propRangeIncludesAttributes 
+    }  
+}
